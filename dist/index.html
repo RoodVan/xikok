@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <title>Главная</title>
+</head>
+<body>
+
+
+<div class="wrapper-hm">
+    <header>
+        <div class="topbox-hm">
+            <div class="hamburger hamburger--hm">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="menu-hm">
+                <a href="#" class="menu-hm__logo">
+                    <img src="assets/img/logo.svg" alt="logo">
+                </a>
+                <ul class="menu-hm__list">
+                    <li class="menu-hm__item">
+                        <a href="#" class="menu-hm__link">название</a>
+                    </li>
+                    <li class="menu-hm__item">
+                        <a href="#" class="menu-hm__link">название</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="logo-hm">
+                <img src="assets/img/logo.svg" alt="logo">
+            </a>
+
+            <button class="btn btn--black btn-reg" onclick="popup.open('#popup__sign-up');">
+                <span>Регистрация</span>
+                <svg>
+                    <use xlink:href="#ic-sign-up"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-hm">
+            <div class="welcome">
+                <div class="welcome-info">
+                    <h1 class="welcome__title wow flipInX" data-wow-duration="1s" data-wow-delay=".2s">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </h1>
+
+                    <div class="welcome__txt wow flipInX">
+                        Lorem ipsum dolor sit amet consectetur. Mauris lorem faucibus sit pellentesque purus elementum.
+                    </div>
+
+                    <div class="welcome__btn">
+                        <a href="#" class="btn btn--black wow flipInX">Попробовать</a>
+                    </div>
+                </div>
+
+                <div class="screen-hm">
+                    <div class="screen1-wp">
+                        <img src="assets/img/home-screen1.jpg" alt="" class="screen1 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+                    </div>
+                    <div class="screen2-wp">
+                        <img src="assets/img/home-screen2.jpg" alt="" class="screen2 wow fadeInUp" data-wow-duration=".7s" data-wow-delay="2s">
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="ft-links">
+                <li class="ft-links__item">
+                    <a href="#" class="ft-links__link">Политика конфиденциальности</a>
+                </li>
+                <li class="ft-links__item">
+                    <a href="#" class="ft-links__link">Пользовательское соглашение</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        Разработано какой-то прекрасной студией при помощи дизайнера saveitll :3
+    </footer></div>
+
+
+<!-- POPUPS BEGIN -->
+
+<!-- Popup Sign Up -->
+<div class="popup" id="popup__sign-up">
+    <div class="popup__container popup__sign-up">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__sign-up');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Авторизация</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">E-mail</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Войти</button>
+                    <div class="popup__form-btns--x2">
+                        <button class="btn btn--gray" onclick="popup.open('#popup__forget');">Забыл пароль</button>
+                        <button class="btn btn--gray" onclick="popup.open('#popup__create-email');">Создать почту</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Popup Forget -->
+<div class="popup" id="popup__forget">
+    <div class="popup__container popup__forget">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__forget');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Восстановление доступа</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">E-mail</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-p">
+                    <div class="popup__form-c">Способ восстановления пароля</div>
+                    <div class="popup__form-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Через резервную почту</span>
+                        </label>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Написать в тех. поддержку</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Готово</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__sign-up');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Create Email -->
+<div class="popup" id="popup__create-email">
+    <div class="popup__container popup__create-email">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__create-email');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Создание почты</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Имя ящика</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black" onclick="popup.open('#popup__create-email2');">Продолжить</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__sign-up');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Create Email : 2 -->
+<div class="popup" id="popup__create-email2">
+    <div class="popup__container popup__create-email2">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__create-email2');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Создание почты</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <input type="email" readonly class="inp popup__form-i inp--info" value="saveitll@example.com">
+                </div>
+
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Повторите пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Продолжить</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__create-email');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div><!-- POPUPS END -->
+
+
+
+<!-- SVG-sprite  -->
+<div style="display: none;">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+          <symbol id="ic-sign-up" viewBox="0 0 24 24">
+            <path d="M15.75 9V5.25C15.75 4.65326 15.5129 4.08097 15.091 3.65901C14.669 3.23705 14.0967 3 13.5 3H7.5C6.90326 3 6.33097 3.23705 5.90901 3.65901C5.48705 4.08097 5.25 4.65326 5.25 5.25V18.75C5.25 19.3467 5.48705 19.919 5.90901 20.341C6.33097 20.7629 6.90326 21 7.5 21H13.5C14.0967 21 14.669 20.7629 15.091 20.341C15.5129 19.919 15.75 19.3467 15.75 18.75V15M12 9L9 12M9 12L12 15M9 12H21.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </symbol>
+
+          <symbol id="ic-close" viewBox="0 0 8 8">
+            <path d="M0.666748 0.666748L4.00008 4.00008M7.33341 7.33341L4.00008 4.00008M4.00008 4.00008L7.33341 0.666748L0.666748 7.33341"/>
+          </symbol>
+
+      </svg>
+</div>
+<!-- ./ SVG-sprite  -->
+<script src="assets/js/jquery/jquery-3.7.1.min.js"></script>
+<script src="assets/js/core.min.js"></script>
+
+</body>
+</html>

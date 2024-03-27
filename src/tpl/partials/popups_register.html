@@ -1,0 +1,159 @@
+
+<!-- Popup Sign Up -->
+<div class="popup" id="popup__sign-up">
+    <div class="popup__container popup__sign-up">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__sign-up');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Авторизация</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">E-mail</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Войти</button>
+                    <div class="popup__form-btns--x2">
+                        <button class="btn btn--gray" onclick="popup.open('#popup__forget');">Забыл пароль</button>
+                        <button class="btn btn--gray" onclick="popup.open('#popup__create-email');">Создать почту</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Popup Forget -->
+<div class="popup" id="popup__forget">
+    <div class="popup__container popup__forget">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__forget');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Восстановление доступа</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">E-mail</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-p">
+                    <div class="popup__form-c">Способ восстановления пароля</div>
+                    <div class="popup__form-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Через резервную почту</span>
+                        </label>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Написать в тех. поддержку</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Готово</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__sign-up');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Create Email -->
+<div class="popup" id="popup__create-email">
+    <div class="popup__container popup__create-email">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__create-email');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Создание почты</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Имя ящика</label>
+                    <input type="email" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black" onclick="popup.open('#popup__create-email2');">Продолжить</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__sign-up');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Create Email : 2 -->
+<div class="popup" id="popup__create-email2">
+    <div class="popup__container popup__create-email2">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__create-email2');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__head">
+                <div class="popup__title">Создание почты</div>
+            </div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <input type="email" readonly class="inp popup__form-i inp--info" value="saveitll@example.com">
+                </div>
+
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Повторите пароль</label>
+                    <input type="password" class="inp popup__form-i">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Продолжить</button>
+                    <button class="btn btn--trans" onclick="popup.open('#popup__create-email');">Назад</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

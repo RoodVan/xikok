@@ -1,0 +1,86 @@
+.inp{
+    background: #F4F4F4;
+    border-radius: 12px;
+    height: 46px;
+    padding: 0 12px;
+    border: 0;
+    outline: none;
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.85);
+
+    &--info{
+        background: rgba(154, 237, 249, 0.3);
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+// Checkbox
+.checkbox{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+    &__inp{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+    }
+    &__label{
+        font-size: 14px;
+        color: #000;
+        margin-left: 5px;
+    }
+    &__frame{
+        width: 16px;
+        height: 16px;
+        background: #FFFFFF;
+        border: 1px solid #C9C9C9;
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+        &:before{
+            content: "";    
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            background: url(../img/checkbox.svg) no-repeat center center / 11px 11px;
+            transform: scale(0);
+            transition: transform .3s ease-in-out;
+        }
+    }
+    &:hover{
+        .checkbox__frame{
+            border: 1px solid #000;
+        }
+    }
+    &__inp{
+        &:checked{
+            & + .checkbox__frame{
+                position: relative;
+                border: 1px solid #000;
+                background-color: #000;
+                animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+                &:before{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+  
+  @keyframes shrink-bounce{
+    0%{
+      transform: scale(1);
+    }
+    33%{    
+      transform: scale(.85);
+    }
+    100%{
+      transform: scale(1);    
+    }
+  }

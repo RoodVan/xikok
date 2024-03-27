@@ -1,0 +1,7 @@
+/node_modules/
+/**/*.psd
+/**/Thumbs.db
+.idea/
+.DS_Store
+/**/.DS_Store
+workspace.code-workspace

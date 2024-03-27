@@ -1,0 +1,84 @@
+---
+layout: default
+title: Главная
+---
+
+<div class="wrapper-hm">
+    <header>
+        <div class="topbox-hm">
+            <div class="hamburger hamburger--hm">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="menu-hm">
+                <a href="#" class="menu-hm__logo">
+                    <img src="assets/img/logo.svg" alt="logo">
+                </a>
+                <ul class="menu-hm__list">
+                    <li class="menu-hm__item">
+                        <a href="#" class="menu-hm__link">название</a>
+                    </li>
+                    <li class="menu-hm__item">
+                        <a href="#" class="menu-hm__link">название</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="logo-hm">
+                <img src="assets/img/logo.svg" alt="logo">
+            </a>
+
+            <button class="btn btn--black btn-reg" onclick="popup.open('#popup__sign-up');">
+                <span>Регистрация</span>
+                <svg>
+                    <use xlink:href="#ic-sign-up"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-hm">
+            <div class="welcome">
+                <div class="welcome-info">
+                    <h1 class="welcome__title wow flipInX" data-wow-duration="1s" data-wow-delay=".2s">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </h1>
+
+                    <div class="welcome__txt wow flipInX">
+                        Lorem ipsum dolor sit amet consectetur. Mauris lorem faucibus sit pellentesque purus elementum.
+                    </div>
+
+                    <div class="welcome__btn">
+                        <a href="#" class="btn btn--black wow flipInX">Попробовать</a>
+                    </div>
+                </div>
+
+                <div class="screen-hm">
+                    <div class="screen1-wp">
+                        <img src="assets/img/home-screen1.jpg" alt="" class="screen1 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+                    </div>
+                    <div class="screen2-wp">
+                        <img src="assets/img/home-screen2.jpg" alt="" class="screen2 wow fadeInUp" data-wow-duration=".7s" data-wow-delay="2s">
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="ft-links">
+                <li class="ft-links__item">
+                    <a href="#" class="ft-links__link">Политика конфиденциальности</a>
+                </li>
+                <li class="ft-links__item">
+                    <a href="#" class="ft-links__link">Пользовательское соглашение</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    {{> footer }}
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_register }}
+<!-- POPUPS END -->
+
