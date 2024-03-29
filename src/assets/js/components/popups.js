@@ -32,7 +32,7 @@ function Popup(){
 		}   
 
         if(!$(document.body).find('.popups-overlay').length){
-            $(`${id}`).append(overlay);        
+            $(document.body).append(overlay);        
         }
 
         const $overlay = $(document.body).find('.popups-overlay');
