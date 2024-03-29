@@ -138,14 +138,21 @@ footer{
 .hamburger{
     cursor: pointer;
     position: absolute;
-    left: 10px;
-    top: 0;bottom: 0;
-    padding: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
     height: 42px;
     width: 41px;
-    display: none;
+    padding: 10px;
+    &--hm{
+        left: 10px;
+        top: 0;bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: none;
+    }
+    &--in{
+        top: 25px;
+        left: 15px;
+        display: none;
+    }
     span{
         display: block;
         width:100%;
@@ -160,8 +167,19 @@ footer{
         }
     }
 
+    @media only screen and (max-width: 1200px) {
+        &--in{
+            display: block;
+        }
+    }
+
     @media only screen and (max-width: 1024px) {
-        display: block;
+        &--hm{
+            display: block;
+        }
+        &--in{
+            left: 10px;
+        }
     }
 }
 
@@ -405,3 +423,23 @@ footer{
     }
 }
 
+.flex{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    &--column{
+        flex-direction: column;
+    }
+    &-head{
+        flex: 0 0 auto;
+    }
+    &-main{
+        flex: 1 1 auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

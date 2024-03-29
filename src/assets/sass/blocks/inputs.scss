@@ -84,3 +84,58 @@
       transform: scale(1);    
     }
   }
+
+  .checkbox-mark{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin-bottom: 0;
+    margin-right: 6px;
+    &__inp{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+    }
+    &__frame{
+        width: 14px;
+        height: 15px;
+        fill: white;
+        stroke: #C9C9C9;
+        transition: all .2s ease-in-out;
+    }
+    &:hover{
+        .checkbox-mark__frame{
+            stroke: #FF4848;
+        }
+    }
+    &__inp{
+        &:checked{
+            & + .checkbox-mark__frame{
+                position: relative;
+                stroke: #FF4848;
+                fill: #FF4848;
+                animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+            }
+        }
+    }
+  }
+
+  .textarea{
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.85);
+    outline: none;
+    resize: none;
+    padding: 15px;
+    &::placeholder{
+        color: #8E8E8E;
+    }
+  }

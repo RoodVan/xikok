@@ -577,8 +577,14 @@ function Popup(){
 	
 	this.open = function(id, ovr = false){
         $(".popup").hide();
+
+		// Menu close
+		if($(".side-menu").is(":visible")) {
+			$(".side-menu").removeClass("side-menu--open");
+		}   
+
         if(!$(document.body).find('.popups-overlay').length){
-            $(document.body).append(overlay);        
+            $(`${id}`).append(overlay);        
         }
 
         const $overlay = $(document.body).find('.popups-overlay');
