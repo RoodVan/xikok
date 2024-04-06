@@ -18,5 +18,9 @@
         "gulp-strip-css-comments": "^2.0.0",
         "gulp-uglify": "^3.0.2",
         "panini": "^1.6.3"
+    },
+    "dependencies": {
+        "@editorjs/editorjs": "^2.29.1",
+        "quill": "^2.0.0-rc.4"
     }
 }

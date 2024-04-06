@@ -24,14 +24,14 @@ var path = {
         js: "dist/assets/js/",
         css: "dist/assets/css/",
         images: "dist/assets/img/",
-        jquery: "dist/assets/js/jquery/"
+        libs: "dist/assets/js/libs/"
     },
     src: {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/*.scss",
         images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
-        jquery: "src/assets/js/jquery/*.js"
+        libs: "src/assets/js/libs/**/*"
     },
     watch: {
         html: "src/**/*.html",
@@ -112,9 +112,10 @@ function js() {
         .pipe(browsersync.stream());
 }
 
-function jquery() {
-    return src(path.src.jquery, {base: './src/assets/js/jquery/'})
-        .pipe(dest(path.build.jquery));
+function libs() {
+    return src(path.src.libs, {base: './src/assets/js/libs/'})
+        .pipe(dest(path.build.libs))
+        .pipe(browsersync.stream());
 }
 
 function images() {
@@ -134,7 +135,7 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, jquery));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, libs));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 

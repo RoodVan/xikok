@@ -1,0 +1,113 @@
+---
+layout: inner_editor
+title: Настройки профиля
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Настройки</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Настройки профиля</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Безопасность</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Фильтры</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Доп. адреса</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Папки и метки</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <div class="mgform mgform--settings">
+                <div class="mgform__cap">Смена пароля</div>
+                <div class="mgform__i">
+                    <label>Пароль</label>
+                    <input type="password" class="inp" placeholder="Пароль">
+                </div>
+
+                <div class="mgform__i">
+                    <label>Новый пароль</label>
+                    <input type="password" class="inp" placeholder="Новый пароль">
+                </div>
+
+                <div class="mgform__i">
+                    <label>Повторите пароль</label>
+                    <input type="password" class="inp" placeholder="Повторите пароль">
+                </div>
+
+                <div class="mgform__b mgform__i">
+                    <button class="btn btn--black w100">Сохранить</button>
+                </div>
+
+                <div class="mgform__inf">
+                    <div class="mgform__cap">Двухфакторная аутентификация</div>
+                    <div class="b-box b-box--blue">
+                        Двухфакторная аутентификация нужна для дополнительный защиты аккаунта. Мы настоятельно рекомендуем подключить её, чтобы обезопасить себя от злоумышленников. Вы сможете использовать любое удобное приложение. Например, Google Authenticator или Authy.
+                    </div>
+                    <button class="btn btn--black" onclick="popup.open('#popup__2fa');">Подключить</button>
+                </div>
+
+                <div class="mgform__inf">
+                    <div class="mgform__cap">Резервная почта</div>
+                    <div class="b-box b-box--0">
+                        Адрес, по которому мы сможем связаться с вами, если обнаружим подозрительную активность в вашем аккаунте или если вы забудете пароль.
+                    </div>
+                    <button class="btn btn--black" onclick="popup.open('#popup__reserve')">Добавить</button>
+                </div>
+
+                <div class="mgform__inf">
+                    <div class="mgform__cap">Удаление аккаунта</div>
+                    <div class="b-box b-box--red">
+                        Рекомендуем несколько раз подумать перед тем, как удалить аккаунт, так как восстановить его не получится. ПОДУМОЙ!
+                    </div>
+                    <button class="btn btn--black">Удалить</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_reserve}}
+
+{{> popups_2fa}}
+<!-- POPUPS END -->

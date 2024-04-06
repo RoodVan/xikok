@@ -1,0 +1,142 @@
+---
+layout: inner_editor
+title: Настройки профиля
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Настройки</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Настройки профиля</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Безопасность</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Фильтры</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Доп. адреса</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Папки и метки</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <div class="mgform _dblock">
+                <div class="mgform__cap">Фильтры</div>
+                <div class="mgform__b">
+                    <button class="btn btn--black" onclick="popup.open('#popup__filter')">Создать</button>
+                </div>
+            </div>
+
+            <div class="ftwp">
+                <table class="ftable">
+                    <thead>
+                        <th colspan="2">Условие</th>
+                        <th colspan="2">Действие</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="Условие">
+                                <span class="smb smb--blue">от кого</span>
+                                <span>kokokoko@example.com</span>
+                            </td>
+                            <td>
+                                <span class="smb smb--blue">содержит</span>
+                                <span>кокококококко купите денег</span>
+                            </td>
+                            <td data-title="Действие">
+                                <span class="smb smb--blue">переместить в папку</span>
+                                <span>мусор</span>
+                            </td>
+                            <td class="text-right">
+                                <button class="btn btn--red _del">
+                                    <span>Удалить</span>
+                                    <svg>
+                                        <use xlink:href="#ic-close"></use>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ftbox">
+                <div class="ftbox__head">
+                    <strong class="t">Заблокированные</strong>
+                    <button class="btn btn--gray" id="unlock-btn" disabled>Разблокировать выбранных</button>
+                </div>
+                <ul class="ftbox__list" data-btn-unlock="#unlock-btn">
+                    <li class="it">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">kokokoko@example.com</span>
+                        </label>
+                    </li>
+                    <li class="it">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">saveitll@example.com</span>
+                        </label>
+                    </li>
+                    <li class="it">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">kvakva1234@example.com</span>
+                        </label>
+                    </li>
+                    <li class="it">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">tututut@example.com</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_filter }}
+<!-- POPUPS END -->

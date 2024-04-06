@@ -1,0 +1,396 @@
+---
+layout: inner
+title: Админ панель
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Админ панель</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Статистика</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Антифрод</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Управление ресурсами</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Команда проекта</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            <div class="mgform-db">
+                <div class="mgform__cap">Управление ресурсами</div>
+                <div class="mgform__il">
+                    <div class="mgform__i">
+                        <input type="text" class="inp" placeholder="Поиск">
+                    </div>
+                </div>
+            </div>
+
+            <table class="ftable ftable--bn _mt-15">
+                <thead>
+                    <th>Адрес</th>
+                    <th>
+                        <span class="btn-filter">Хранилище</span>
+                    </th>
+                    <th colspan="2">Последний вход</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            saveitll@example.com
+                        </td>
+                        <td>
+                            <span class="cl-red">14.7Gb/15Gb</span>
+                        </td>
+                        <td>
+                            15.03.2024
+                        </td>
+                        <td class="text-right">
+                            <span class="ftable__btns">
+                                <button class="btn btn--black _sm">Очистить хранилище</button>
+                                <button class="btn btn--black _sm">Уведомить об оплате</button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            saveitll@example.com
+                        </td>
+                        <td>
+                            10.1Gb/15Gb
+                        </td>
+                        <td>
+                            <span class="cl-red">15.03.2024</span>
+                        </td>
+                        <td class="text-right">
+                            <span class="ftable__btns">
+                                <button class="btn btn--black _sm">Очистить хранилище</button>
+                                <button class="btn btn--black _sm">Уведомить об оплате</button>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            saveitll@example.com
+                        </td>
+                        <td>
+                            11.3Gb/15Gb
+                        </td>
+                        <td>
+                            <span class="cl-red">19.02.2022</span>
+                        </td>
+                        <td class="text-right">
+                            <span class="ftable__btns">
+                                <button class="btn btn--black _sm">Очистить хранилище</button>
+                                <button class="btn btn--black _sm">Уведомить об оплате</button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="mgform-db">
+                <div class="mgform__cap">Список запросов пользователей</div>
+
+                <ul class="ulist mgform-flbtns">
+                    <li>
+                        <button class="btn btn--black">Решенные</button>
+                    </li>
+                    <li>
+                        <button class="btn btn--gray">Нерешенные</button>
+                    </li>
+                    <li>
+                        <button class="btn btn--gray">Отвеченные</button>
+                    </li>
+                    <li>
+                        <button class="btn btn--gray">Неотвеченные</button>
+                    </li>
+                </ul>
+
+                <div class="mgform__il">
+                    <div class="mgform__i">
+                        <input type="text" class="inp" placeholder="Поиск">
+                    </div>
+                </div>
+            </div>
+
+            <div class="inbox-list _mt-10">
+                <table class="inbox-table inbox-table--full">
+                    <thead>
+                        <tr>
+                            <th>Пользователь</th>
+                            <th>Тип</th>
+                            <th>Тема</th>
+                            <th>Описание</th>
+                            <th colspan="2">Саппорт</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='clickable-row' data-href="#">
+                            <td data-title="Пользователь" class="td-title _pl-15 no-read">
+                                <span class="inbox-table__title">
+                                    <span class="tin-icon">S</span>
+                                    <span class="tin-title">saveitll</span>
+                                </span>
+                            </td>
+                            <td data-title="Тип:">
+                                <span class="pmbox pmbox--orange" onclick="popup.open('#popup__tip')">Вопрос</span>
+                            </td>
+                            <td data-title="Тема:">
+                                <strong>Lorem ipsum</strong>
+                            </td>
+                            <td data-title="Описание:" class="td-msg">
+                                <span class="inbox-table__msg">
+                                    <span class="tin-txt">
+                                        Lorem ipsum dolor sit amet consectetur. Egestas ornare...
+                                    </span>
+                                </span>
+                            </td>
+                            <td data-title="Саппорт:">
+                                kvskvks
+                            </td>
+                            <td class="td-date">
+                                <span class="d">03.03.24</span>
+                                <span class="toptions">
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-zip">
+                                            <use xlink:href="#ic-zip"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-cover">
+                                            <use xlink:href="#ic-cover"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-trash">
+                                            <use xlink:href="#ic-trash"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href="#">
+                            <td data-title="Пользователь" class="td-title _pl-15 no-read">
+                                <span class="inbox-table__title">
+                                    <span class="tin-icon">S</span>
+                                    <span class="tin-title">saveitll</span>
+                                </span>
+                            </td>
+                            <td data-title="Тип:">
+                                <span class="pmbox pmbox--orange" onclick="popup.open('#popup__tip')">Вопрос</span>
+                            </td>
+                            <td data-title="Тема:">
+                                <strong>Lorem ipsum</strong>
+                            </td>
+                            <td data-title="Описание:" class="td-msg">
+                                <span class="inbox-table__msg">
+                                    <span class="tin-txt">
+                                        Lorem ipsum dolor sit amet consectetur. Egestas ornare...
+                                    </span>
+                                </span>
+                            </td>
+                            <td data-title="Саппорт:">
+                                kvskvks
+                            </td>
+                            <td class="td-date">
+                                <span class="d">03.03.24</span>
+                                <span class="toptions">
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-zip">
+                                            <use xlink:href="#ic-zip"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-cover">
+                                            <use xlink:href="#ic-cover"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-trash">
+                                            <use xlink:href="#ic-trash"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href="#">
+                            <td data-title="Пользователь" class="td-title _pl-15 no-read">
+                                <span class="inbox-table__title">
+                                    <span class="tin-icon">S</span>
+                                    <span class="tin-title">saveitll</span>
+                                </span>
+                            </td>
+                            <td data-title="Тип:">
+                                <span class="pmbox pmbox--orange" onclick="popup.open('#popup__tip')">Вопрос</span>
+                            </td>
+                            <td data-title="Тема:">
+                                <strong>Lorem ipsum</strong>
+                            </td>
+                            <td data-title="Описание:" class="td-msg">
+                                <span class="inbox-table__msg">
+                                    <span class="tin-txt">
+                                        Lorem ipsum dolor sit amet consectetur. Egestas ornare...
+                                    </span>
+                                </span>
+                            </td>
+                            <td data-title="Саппорт:">
+                                kvskvks
+                            </td>
+                            <td class="td-date">
+                                <span class="d">03.03.24</span>
+                                <span class="toptions">
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-zip">
+                                            <use xlink:href="#ic-zip"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-cover">
+                                            <use xlink:href="#ic-cover"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-trash">
+                                            <use xlink:href="#ic-trash"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href="#">
+                            <td data-title="Пользователь" class="td-title _pl-15 no-read">
+                                <span class="inbox-table__title">
+                                    <span class="tin-icon">S</span>
+                                    <span class="tin-title">saveitll</span>
+                                </span>
+                            </td>
+                            <td data-title="Тип:">
+                                <span class="pmbox pmbox--orange" onclick="popup.open('#popup__tip')">Вопрос</span>
+                            </td>
+                            <td data-title="Тема:">
+                                <strong>Lorem ipsum</strong>
+                            </td>
+                            <td data-title="Описание:" class="td-msg">
+                                <span class="inbox-table__msg">
+                                    <span class="tin-txt">
+                                        Lorem ipsum dolor sit amet consectetur. Egestas ornare...
+                                    </span>
+                                </span>
+                            </td>
+                            <td data-title="Саппорт:">
+                                kvskvks
+                            </td>
+                            <td class="td-date">
+                                <span class="d">03.03.24</span>
+                                <span class="toptions">
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-zip">
+                                            <use xlink:href="#ic-zip"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-cover">
+                                            <use xlink:href="#ic-cover"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-trash">
+                                            <use xlink:href="#ic-trash"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class='clickable-row' data-href="#">
+                            <td data-title="Пользователь" class="td-title _pl-15 no-read">
+                                <span class="inbox-table__title">
+                                    <span class="tin-icon">S</span>
+                                    <span class="tin-title">saveitll</span>
+                                </span>
+                            </td>
+                            <td data-title="Тип:">
+                                <span class="pmbox pmbox--orange" onclick="popup.open('#popup__tip')">Вопрос</span>
+                            </td>
+                            <td data-title="Тема:">
+                                <strong>Lorem ipsum</strong>
+                            </td>
+                            <td data-title="Описание:" class="td-msg">
+                                <span class="inbox-table__msg">
+                                    <span class="tin-txt">
+                                        Lorem ipsum dolor sit amet consectetur. Egestas ornare...
+                                    </span>
+                                </span>
+                            </td>
+                            <td data-title="Саппорт:">
+                                kvskvks
+                            </td>
+                            <td class="td-date">
+                                <span class="d">03.03.24</span>
+                                <span class="toptions">
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-zip">
+                                            <use xlink:href="#ic-zip"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-cover">
+                                            <use xlink:href="#ic-cover"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="toptions__link">
+                                        <svg class="ic-trash">
+                                            <use xlink:href="#ic-trash"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>               
+                </table>
+            </div>
+
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_edit_tip }}
+<!-- POPUPS END -->

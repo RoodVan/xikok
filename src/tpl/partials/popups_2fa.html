@@ -1,0 +1,65 @@
+<!-- 2FA -->
+<div class="popup" id="popup__2fa">
+    <div class="popup__container popup__2fa">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__2fa');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__support__title">Двухфакторная аутентификация</div>
+
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Пароль</label>
+                    <input type="password" class="inp">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black" onclick="popup.open('#popup__2fa--2');">Продолжить</button>
+                </div>
+            </div>    
+        </div>
+
+    </div>
+</div>
+<!-- 2FA--2 -->
+<div class="popup" id="popup__2fa--2">
+    <div class="popup__container popup__2fa--2">
+
+        <div class="popup__body">
+            <button type="button" class="btn popup__close" onclick="popup.close('#popup__2fa--2');">
+                <svg>
+                    <use xlink:href="#ic-close"></use>
+                </svg>
+            </button>
+
+            <div class="popup__support__title">Двухфакторная аутентификация</div>
+            <div class="popup__subtitle">Скачайте и установите Google Authenticator или Authy, либо подойдет любое приложение, создающее коды.</div>
+
+            <div class="popup__qrc">
+                <div class="popup__qrc__img">
+                    <img src="assets/img/content/qrcode.jpg" alt="qrcode">
+                </div>
+                <div class="popup__qrc__info">
+                    <p>Отсканируйте QR код в приложении или введите кож вручную.</p>
+                    <input type="text" readonly class="inp" value="ERTBSZRYJYR46S4WSHRW4HT">
+                </div> 
+            </div>
+            
+            <div class="popup__form">
+                <div class="popup__form-g">
+                    <label class="popup__form-l">Код из приложения</label>
+                    <input type="text" class="inp">
+                </div>
+
+                <div class="popup__form-btns">
+                    <button class="btn btn--black">Подтвердить</button>
+                </div>
+            </div>    
+        </div>
+
+    </div>
+</div>

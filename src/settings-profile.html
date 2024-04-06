@@ -1,0 +1,101 @@
+---
+layout: inner_editor
+title: Настройки профиля
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Настройки</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Настройки профиля</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Безопасность</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Фильтры</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Доп. адреса</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Папки и метки</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <div class="mgform mgform--settings">
+                <div class="mgform__i">
+                    <div class="mgform__cap">Имя</div>
+                    <label>Ваше имя</label>
+                    <input type="text" class="inp" placeholder="Ваше имя">
+                </div>
+
+                <div class="mgform__i">
+                    <div class="mgform__cap">Подпись</div>
+                </div>
+
+                <div class="editor-sm">
+                    <div class="jseditor"></div>
+                </div>
+
+                <div class="mgform__b">
+                    <button class="btn btn--black">Сохранить</button>
+                </div>
+
+                <div class="mgform__opt">
+                    <div class="mgform__cap">Расположение подписи при ответе</div>
+                    <div>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Сразу после ответа</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__inp">
+                            <span class="checkbox__frame"></span>
+                            <span class="checkbox__label">Внизу всего письма</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+<!-- POPUPS END -->

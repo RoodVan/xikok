@@ -11,6 +11,12 @@
 /* Popups */
 @import "./blocks/popups.scss";
 
+/* Custom select */
+@import "./blocks/select.scss";
+
+/* Noty */
+@import "./blocks/noty.scss";
+
 
 .wrapper-hm{
 	width: 100%;
@@ -40,6 +46,7 @@ footer{
 
     font-size: 20px;
     text-align: center;
+    color: #fff;
 
     @media only screen and (max-width: 1024px) {
         font-size: 14px;
@@ -441,5 +448,97 @@ footer{
         padding-right: 20px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
+    }
+}
+
+.mobile-only{
+    display: none;
+    @media only screen and (max-width: 460px) {
+        &.sw460{
+            display: block;
+        }
+    }
+}
+
+.notfound{
+    position: relative;
+    height: 100%;
+    .popups-overlay__logo{
+        z-index: 2;
+    }
+    &__box{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        h1{
+            font-weight: 200;
+            font-size: 388px;
+            line-height: 470px;
+            color: #000;
+        }
+
+        p{
+            max-width: 476px;
+            text-align: center;
+            line-height: 150%;
+        }
+
+        .btns{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            .btn{
+                margin-left: 8px;
+                margin-right: 8px;
+                margin-top: 10px;
+                width: 216px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            h1{
+                font-size: 199px;
+                line-height: 1.3;
+            }
+        }
+
+        @media only screen and (max-width: 520px) {
+            h1{
+                font-size: 110px;
+                line-height: 1.3;
+            }
+            .btns{
+                justify-content: space-between;
+                width: 100%;
+                .btn{
+                    width: auto;
+                    flex: 0 0 50%;
+                    max-width: calc(50% - 7px);
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.exm-nav{
+    margin: 30px auto;
+    text-align: center;
+    li{
+        margin: 5px 0;
+    }
+    a{
+        font-size: 22px;
+        line-height: 180%;
     }
 }

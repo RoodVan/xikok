@@ -1,0 +1,95 @@
+---
+layout: inner_editor
+title: Настройки профиля
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Настройки</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Настройки профиля</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Безопасность</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Фильтры</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Доп. адреса</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Папки и метки</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <div class="mgform _dblock">
+                <div class="mgform__cap">Подключенные адреса</div>
+                <div class="lb">Вы можете добавить 3 дополнительных почты, чтобы отправлять и получать с них письма.</div>
+                <div class="mgform__b">
+                    <button class="btn btn--black" onclick="popup.open('#popup__emails-add')">Добавить</button>
+                </div>
+            </div>
+
+            <div class="ftbox _mt-20">
+                <ul class="ftbox__list">
+                    <li class="it itp">
+                        <span class="e">saveitll@example.com</span>
+                        <span class="b">
+                            <span class="smb smb--orange">По умолчанию</span>
+                        </span>
+                    </li>
+                    <li class="it itp">
+                        <span class="e">kvakva1234@example.com</span>
+                        <span class="b">
+                            <buttom class="btn btn--red _mdel" onclick="popup.open('#popup__emails-add2')">
+                                <span>Удалить</span>
+                                <svg>
+                                    <use xlink:href="#ic-close"></use>
+                                </svg>
+                            </buttom>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_emails_add }}
+<!-- POPUPS END -->

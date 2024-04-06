@@ -1,0 +1,117 @@
+---
+layout: inner
+title: Админ панель
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Админ панель</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Статистика</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Антифрод</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Управление ресурсами</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Команда проекта</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <ul class="stbox">
+                <li class="stbox__item">
+                    <span class="t">Пользователей</span>
+                    <span class="n">79163</span>
+                </li>
+                <li class="stbox__item">
+                    <span class="t">Отправлено писем</span>
+                    <span class="n">791К</span>
+                </li>
+                <li class="stbox__item">
+                    <span class="t">Регистраций</span>
+                    <span class="n">54584</span>
+                </li>
+            </ul>
+
+            <div class="mgform-db">
+                <div class="mgform__cap">Управление пользователями</div>
+                <div class="mgform__il">
+                    <div class="mgform__i">
+                        <input type="text" class="inp">
+                    </div>
+                    <span class="tl">По вашему запросу найден 1 пользователь</span>
+                </div>
+            </div>
+
+            <table class="ftable ftable--bn _mt-15">
+                <thead>
+                    <th>Адрес</th>
+                    <th>IP</th>
+                    <th>Отправлено писем</th>
+                    <th colspan="2">Дата последнего входа</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title="Адрес">
+                            saveitll@example.com
+                        </td>
+                        <td data-title="IP">
+                            17.156.48
+                        </td>
+                        <td data-title="Отправлено писем">
+                            17
+                        </td>
+                        <td data-title="Дата последнего входа">
+                            17.03.2024
+                        </td>
+                        <td class="text-right">
+                            <span class="ftable__btns">
+                                <button class="btn btn--black _sm">Убрать Email из черного списка</button>
+                                <button class="btn btn--black _sm">Добавить IP в черный список</button>
+                                <button class="btn btn--red _sm">Заблокировать</button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+<!-- POPUPS END -->

@@ -1,0 +1,127 @@
+---
+layout: inner
+title: Настройки профиля
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="title-n">
+                            <h1>Настройки</h1>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk-menu">
+                <ul class="lk-menu__list">
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Настройки профиля</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Безопасность</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Фильтры</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link">Доп. адреса</a>
+                    </li>
+                    <li class="lk-menu__item">
+                        <a href="#" class="lk-menu__link lk-menu__link--active">Папки и метки</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            
+            <div class="mgform mgform-fm">
+                <div class="mgform__cap">Ваши папки</div>
+                <div class="mgform__b">
+                    <button class="btn btn--black" onclick="popup.open('#popup__folder-add')">Создать</button>
+                    <button class="btn btn--gray" onclick="popup.open('#popup__folder-edit')">Редактировать</button>
+                </div>
+
+                <ul class="ulist">
+                    <li class="btbox">
+                        <span>мегаважное</span>
+                        <span class="btbox__close">
+                            <svg>
+                                <use xlink:href="#ic-close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="btbox">
+                        <span>название папки</span>
+                        <span class="btbox__close">
+                            <svg>
+                                <use xlink:href="#ic-close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mgform mgform-fm">
+                <div class="mgform__cap">Ваши метки</div>
+                <div class="mgform__b">
+                    <button class="btn btn--black" onclick="popup.open('#popup__mark-add')">Создать</button>
+                    <button class="btn btn--gray" onclick="popup.open('#popup__mark-edit')">Редактировать</button>
+                </div>
+
+                <ul class="ulist">
+                    <li class="btbox" style="background: rgba(154, 237, 249, 0.3); color: #18A5E1;">
+                        <span>мегаважное</span>
+                        <span class="btbox__close">
+                            <svg style="stroke:#18A5E1">
+                                <use xlink:href="#ic-close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="btbox" style="background: rgba(249, 200, 154, 0.3); color: #E16018;">
+                        <span>название папки</span>
+                        <span class="btbox__close">
+                            <svg style="stroke:#E16018">
+                                <use xlink:href="#ic-close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="btbox" style="background: rgba(154, 249, 169, 0.3); color: #1FF10D;">
+                        <span>Работа</span>
+                        <span class="btbox__close">
+                            <svg style="stroke:#1FF10D">
+                                <use xlink:href="#ic-close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_mark }}
+<!-- POPUPS END -->

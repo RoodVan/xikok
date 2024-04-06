@@ -1,0 +1,102 @@
+---
+layout: inner_editor
+title: Написать сообщение
+---
+
+<div class="wrapper">
+
+    {{> side_menu }}
+
+    <section class="content flex flex--column">
+        <div class="flex-head">
+            <div class="content-head">
+                <div class="hamburger hamburger--in">
+                    <span></span><span></span><span></span>
+                </div>
+                
+                <div class="content-head__top">
+                    <div class="content-head__title">
+                        <div class="mb-top">
+                            <a href="#" class="btn btn--gray">Назад</a>
+                            <a href="#" class="btn btn--red">Удалить</a>
+                        </div>
+                    </div>
+
+                    <div class="content-head__props">
+                        <span class="prop-box">Использовано 7.7Gb/15Gb</span>
+                        <span class="prop-box">saveitll@example.com</span>
+                        <a href="#" class="link-red">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex-main">
+            <div class="msg fixvh">
+
+                <div class="mgform fixvh__head">
+                    <div class="mgform__l">
+                        <div class="mgform__g">
+                            <div class="mgform__i">
+                                <label>Кому</label>
+                                <input type="email" class="inp" placeholder="Кому">
+                            </div>
+                            <ul class="ulist">
+                                <li class="btbox">
+                                    <span>saveitll@example.com</span>
+                                    <span class="btbox__close">
+                                        <svg>
+                                            <use xlink:href="#ic-close"></use>
+                                        </svg>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mgform__i">
+                            <label>Тема</label>
+                            <input type="text" class="inp" placeholder="Тема">
+                        </div>
+                    </div>
+                    <div class="mgform__rb mgform__btns">
+                        <button class="btn btn--wh">
+                            <svg class="ic-zip24">
+                                <use xlink:href="#ic-zip24"></use>
+                            </svg>
+                            <span>Сохранить черновик</span>
+                        </button>
+                        <button class="btn btn--wh" id="js-msg-file-btn">
+                            <svg class="ic-brace">
+                                <use xlink:href="#ic-brace"></use>
+                            </svg>
+                            <span>Добавить</span>
+                        </button>
+                        <input type="file" class="hidden" name="msgfiles[]" id="js-msg-file-inp" />
+                        <button class="btn _lg btn--black">Отправить</button>
+                    </div>
+                </div>
+
+                <div class="jeditor-wrap fixvh__main">
+                    <div class="jseditor"></div>
+                </div>
+
+                <div class="msg__files js-msg-files fixvh__foot">
+                    <div class="msg__files__caption"></div>
+
+                    <ul class="msg__files__list">
+                    </ul>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<!-- POPUPS BEGIN -->
+{{> popups_support }}
+
+{{> popups_claim }}
+<!-- POPUPS END -->

@@ -23,7 +23,7 @@
     align-items: center;
     cursor: pointer;
     margin-bottom: 0;
-    &__inp{
+    &-btn__inp, &__inp{
         width: 0;
         height: 0;
         opacity: 0;
@@ -39,6 +39,7 @@
     &__frame{
         width: 16px;
         height: 16px;
+        flex: 0 0 16px;
         background: #FFFFFF;
         border: 1px solid #C9C9C9;
         border-radius: 4px;
@@ -71,27 +72,125 @@
             }
         }
     }
+
+    &-btn{
+        cursor: pointer;
+        margin-bottom: 0;
+        &__frame{
+            background: #F4F4F4;
+            border: 1px solid #F4F4F4;
+            border-radius: 12px;
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 16px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            &:hover{
+                background: #DEDEDE;
+                color: rgba(0, 0, 0, 0.85);
+            }
+        }
+        &__inp{
+            &:checked{
+                & + .checkbox-btn__frame{
+                    border: 1px solid #000;
+                }
+            }
+        }
+    }
+
 }
   
-  @keyframes shrink-bounce{
-    0%{
-      transform: scale(1);
-    }
-    33%{    
-      transform: scale(.85);
-    }
-    100%{
-      transform: scale(1);    
-    }
-  }
+@keyframes shrink-bounce{
+0%{
+    transform: scale(1);
+}
+33%{    
+    transform: scale(.85);
+}
+100%{
+    transform: scale(1);    
+}
+}
 
-  .checkbox-mark{
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin-bottom: 0;
-    margin-right: 6px;
+.checkbox-mark{
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+padding: 10px 5px;
+margin-bottom: 0;
+margin-right: 6px;
+&__inp{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+&__frame{
+    width: 14px;
+    height: 15px;
+    fill: white;
+    stroke: #C9C9C9;
+    transition: all .2s ease-in-out;
+}
+&:hover{
+    .checkbox-mark__frame{
+        stroke: #FF4848;
+    }
+}
+&__inp{
+    &:checked{
+        & + .checkbox-mark__frame{
+            position: relative;
+            stroke: #FF4848;
+            fill: #FF4848;
+            animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+        }
+    }
+}
+}
+
+.textarea{
+width: 100%;
+border: 1px solid #E0E0E0;
+border-radius: 12px;
+background: #fff;
+font-size: 16px;
+line-height: 19px;
+color: rgba(0, 0, 0, 0.85);
+outline: none;
+resize: none;
+padding: 15px;
+&::placeholder{
+    color: #8E8E8E;
+}
+}
+
+.color-box{
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    padding: 6px;
+    background: #F4F4F4;
+    border-radius: 12px;
+    &__label{
+        margin: 2px;
+        cursor: pointer;
+        position: relative;
+    }
+    &__frame{
+        display: block;
+        transition: all .2s ease-in-out;
+        width: 28px;
+        height: 28px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
     &__inp{
         width: 0;
         height: 0;
@@ -99,43 +198,10 @@
         position: absolute;
         z-index: -1;
         visibility: hidden;
-    }
-    &__frame{
-        width: 14px;
-        height: 15px;
-        fill: white;
-        stroke: #C9C9C9;
-        transition: all .2s ease-in-out;
-    }
-    &:hover{
-        .checkbox-mark__frame{
-            stroke: #FF4848;
-        }
-    }
-    &__inp{
         &:checked{
-            & + .checkbox-mark__frame{
-                position: relative;
-                stroke: #FF4848;
-                fill: #FF4848;
-                animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+            & + .color-box__frame {
+                border: 1px solid #000;
             }
         }
     }
-  }
-
-  .textarea{
-    width: 100%;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
-    background: #fff;
-    font-size: 16px;
-    line-height: 19px;
-    color: rgba(0, 0, 0, 0.85);
-    outline: none;
-    resize: none;
-    padding: 15px;
-    &::placeholder{
-        color: #8E8E8E;
-    }
-  }
+}  

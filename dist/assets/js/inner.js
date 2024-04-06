@@ -25,7 +25,7 @@ function xupload(selector, options){
 			const reader = new FileReader();
 			
 			reader.onload = ev => {
-				options.cb({name: file.name, result: ev.target.result});
+				options.cb({name: file.name, result: ev.target.result, size: file.size});
 			}
 			
 			reader.readAsDataURL(file);
