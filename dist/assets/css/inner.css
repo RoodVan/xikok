@@ -1529,6 +1529,10 @@
     border-radius: 12px;
 }
 
+.mb-top + .title-n {
+    margin-left: 20px;
+}
+
 @media only screen and (max-width: 992px) {
     .mb-top {
         position: absolute;
@@ -1536,6 +1540,10 @@
         left: 60px;
         padding: 0 10px !important;
         height: 35px;
+    }
+
+    .mb-top + .title-n {
+        margin-left: 0;
     }
 }
 
@@ -5614,14 +5622,26 @@
     padding-right: 10px;
 }
 
-.ql-picker:after {
+.ql-picker.ql-font:after {
+    right: 0;
+}
+
+.ql-picker.ql-expanded:after {
+    display: none;
+}
+
+.ql-picker-label {
+    position: relative;
+}
+
+.ql-picker-label:after {
     content: "";
     display: block;
     position: absolute;
     width: 10px;
     height: 16px;
     margin-left: 8px;
-    right: -10px;
+    right: 0px;
     top: 0;
     bottom: 0;
     margin-top: auto;
@@ -5629,12 +5649,13 @@
     background: url(../img/arrow.svg) no-repeat center center/contain;
 }
 
-.ql-picker.ql-font:after {
-    right: 0;
+.ql-color-picker .ql-picker-label {
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
-.ql-picker.ql-expanded:after {
-    display: none;
+.ql-color-picker .ql-picker-label:after {
+    right: -20px;
 }
 
 .ql-snow .ql-tooltip[data-mode=link]:before {

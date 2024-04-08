@@ -1035,11 +1035,17 @@
         font-size: 16px;
         border-radius: 12px;
     }
+    & + .title-n{
+        margin-left: 20px;
+    }
     @media only screen and (max-width: 992px) {
         position: absolute;
         top: 29px; left: 60px;
         padding: 0 10px !important;
         height: 35px;
+        & + .title-n{
+            margin-left: 0;
+        }
     }
 
     @media only screen and (max-width: 460px) {
@@ -1908,19 +1914,6 @@
 .ql-picker{
     position: relative;
     padding-right: 10px;
-    &:after{
-        content: "";
-        display: block;
-        position: absolute;
-        width: 10px;
-        height: 16px;
-        margin-left: 8px;
-        right: -10px;
-        top: 0; bottom: 0;
-        margin-top: auto;
-        margin-bottom: auto;
-        background: url(../img/arrow.svg) no-repeat center center / contain;
-    }
     &.ql-font{
         &:after{
             right: 0;
@@ -1929,6 +1922,30 @@
     &.ql-expanded{
         &:after{
             display: none;
+        }
+    }
+}
+
+.ql-picker-label{
+    position: relative;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 16px;
+        margin-left: 8px;
+        right: 0px;
+        top: 0; bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: url(../img/arrow.svg) no-repeat center center / contain;
+    }
+    .ql-color-picker & {
+        margin-left: 3px;
+        margin-right: 3px;
+        &:after{
+            right: -20px;
         }
     }
 }

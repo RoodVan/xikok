@@ -204,7 +204,7 @@ $(function(){
 
     $("[data-all-checked]").on("click", function(){
         let box = $(this).data("all-checked");
-        let checkboxList = $(box + ' input[type="checkbox"]');
+        let checkboxList = $(box + ' .checkbox__inp');
         let flag = $(this).find(".checkbox__inp").prop("checked");
 
         checkboxList.prop( "checked", flag );
@@ -240,16 +240,6 @@ $(function(){
             return quill.history.redo();
         }
 
-        
-        // document.querySelector(".jseditor .ql-editor")
-        // .addEventListener('keypress', function (e) {
-        //     let element = this;
-        //     e.stopPropagation();
-        //     console.log(element.offsetHeight, element.scrollHeight);
-        //     // if ((element.offsetHeight < element.scrollHeight)) {
-        //     //     e.stopPropagation();
-        //     // }
-        // });
     }
 
 
