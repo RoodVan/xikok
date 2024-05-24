@@ -802,6 +802,41 @@ function notify(type, text) {
     }).show();
 } 
 
+// Noty confirm
+const confirmNoty = new Noty({
+    text: 'Do you want to continue?',
+    theme: 'mint',
+    layout: 'center',
+
+    buttons: [
+        Noty.button('YES', 'btn btn--black', function () {
+            console.log('button 1 clicked');
+        }, {id: 'button1', 'data-status': 'ok'}),
+    
+        Noty.button('NO', 'btn btn--gray', function () {
+            console.log('button 2 clicked');
+            confirmNoty.close();
+        })
+    ],
+
+    callbacks: {
+        beforeShow: function(){
+            let ovr =`<div class="popups-overlay" style="opacity:1;">
+                        <a href="./" class="popups-overlay__logo">
+                            <img src="assets/img/logo.svg" alt="logo">
+                        </a>
+                    </div>`;
+            if(!$(document.body).find('.popups-overlay').length){
+                $(document.body).append(ovr);        
+            }
+        },
+        onClose: function(){
+            $(document.body).find('.popups-overlay').remove();
+        },
+    }
+
+});
+
  
 
 
